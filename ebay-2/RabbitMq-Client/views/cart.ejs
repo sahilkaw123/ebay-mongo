@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>ebay</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+    <style>
+        .navbar {min-height: 20px;}
+        .navbar-brand {padding:  5px; height: 20px; line-height: 20px;}
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0px;
+            font-size: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            min-height: 180px;
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .columnx {
+            margin-bottom: 5px;
+        }
+        .groupName {
+            color: #2B91AF;
+        }
+
+    </style>
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <script src="angularjs/carts.js"></script>
+</head>
+
+<body ng-app="cart" ng-controller="cartController" style="background-color: whitesmoke;">
+
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li class="active"></li>
+                    <li class="dropdown"><a  data-toggle="dropdown" href="#">Hi <b><%= firstname %></b>! <span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            <a class="text-left" href="#"><small>&nbsp&nbsp&nbsp&nbsp<%= firstname %></small>&nbsp<small><%= lastname %></small></a>
+                            <a class="text-left" href="#"><small><b><%=username%></b></small></a>
+                            <a class="text-right" href="signout"><font color ="blue"><small> Sign out</small></font></a>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">| <small>Daily Deals</small>  |</a></li>
+                    <li><a href="#">| <small>Gift Cards</small> |</a></li>
+                    <li><a href="#">| <small>Sell</small> |</a></li>
+                    <li><a href="#">| <small>Help & Contact</small> |</a></li>
+                    <li>&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp
+
+
+                    </li>
+
+                    <li class="dropdown"><a  data-toggle="dropdown" href="#"><small>My ebay</small></span></a>
+                        <ul class="dropdown-content">
+
+
+                            <a class="text-left" href=""><small> Summary</small></a>
+                            <a class="text-left" href="#"><small> Bids/Offers</small></a>
+                            <a class="text-left" href="#"><small> Watch list</small></a>
+                            <a class="text-left" href="#"><small> Wish list</small></a>
+                            <a class="text-left" href="#"><small> All lists</small></a>
+                            <a class="text-left" href="#"><small> Purchase history</small></a>
+                            <a class="text-left" href="#"><small> Selling</small></a>
+                            <a class="text-left" href="#"><small> My Collections</small></a>
+                            <a class="text-left" href="#"><small> Followed searches</small></a>
+                            <a class="text-left" href="#"><small> Messages</small></a>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a  data-toggle="dropdown" href="#"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/rounded-glossy-black-icons-culture/033335-rounded-glossy-black-icon-culture-bell5-solid-sc48.png" alt="Cinque Terre" width="25" height="25" ></a>
+                        <ul class="dropdown-content">
+                            <p class="text-center" > &nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                You're all caught up!</p>
+                        </ul>
+                    </li>
+                    <li><a href="/cart">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="https://image.freepik.com/free-icon/shopping-cart-of-checkered-design_318-50865.png" alt="Cinque Terre" width="25" height="25" ></a></li>
+                    <li>{{QTYC}}</li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </div>
+</div> <br><br>
+<!---->
+<div class="container-fluid">
+
+    <div class ="row">
+        <div class="col-md-1">
+            <img src="http://www.localleaguefixtures.com/images/ebay_logo_small.jpg" width="120" height="60" align="left">
+        </div>
+
+        <div class="col-md-1"><br>
+
+            <li class="dropdown"><a data-toggle="dropdown" href="#"><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspShop by &nbsp&nbsp&nbsp&nbsp&nbsp&nbspCategory</b><span class="caret"></span></a>
+                <ul class="dropdown-content">
+
+                    <a class="text-left" href=""><small> Summary</small></a>
+                    <a class="text-left" href="#"><small> Bids/Offers</small></a>
+                    <a class="text-left" href="#"><small> Watch list</small></a>
+                    <a class="text-left" href="#"><small> Wish list</small></a>
+                    <a class="text-left" href="#"><small> All lists</small></a>
+                    <a class="text-left" href="#"><small> Purchase history</small></a>
+                    <a class="text-left" href="#"><small> Selling</small></a>
+                    <a class="text-left" href="#"><small> My Collections</small></a>
+                    <a class="text-left" href="#"><small> Followed searches</small></a>
+                    <a class="text-left" href="#"><small> Messages</small></a>
+                </ul>
+            </li>
+        </div>
+
+        <div class="col-md-4"><br>
+            <input type="text" class="form-control" name="s" placeholder="Search" value="" style="width:130px,height:40px;" >
+        </div>
+        <div class="col-md-3" ><br>
+            <select class="form-control" ng-model="option" ng-options="x.model for x in options" style="width:300px"></select>
+        </div>
+        <div class="col-md-1"><br>
+            <button type="button" class="btn btn-primary" style="width:120px">Search</button></div>
+        <div class="col-md-2" ><br>
+            <font><small>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAdvanced</small></font>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="col-md-3 col-md-offset-8"><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size="3" color ="blue"><small><b>Send us your comments</b></font></small>
+</div><br>
+<div class="row">
+    <div class="col-md-4">
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size="6" color ="black"><small><b>Your eBay Shopping Cart</b></font></small>
+    </div><br><br><br><br><br>
+
+</div>
+
+<div class ="container">
+    <div class ="row">
+        <div class="col-md-8" style="border-style:double;" ><br><br>
+            <div class="column" ng-repeat="result in newResult">
+                <div class="col-md-12" style="border-style:ridge;">
+
+                    <div class ="row">
+                        <div class ="col-md-12" style="border-style:ridge;">
+                            <div class ="col-md-5"><br>
+                                <p><Strong>Seller Name : </Strong>{{result.SELLER_USERNAME}}</p>
+                            </div>
+                            <div class = "col-md-3 col-md-offset-3"> <br>
+                                <button type="button" class="btn btn-default" ng-click="paySeller(result.ITEM_CODE, Qty);" style="width:220px"><font color ="blue"><small> Pay only this seller</small></button> </font></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class ="row">
+                        <div class = "col-md-3" style="border-style:ridge;">
+                            <a href=""><img src= {{result.PIC}} alt="Cinque Terre" width="160" height="150" ></a>
+                        </div>
+                        <div class = "col-md-5">&nbsp&nbsp&nbsp
+                            <a href="/detail"><p><Strong><font size="3" color ="blue">{{result.ITEM_NAME}} {{result.ITEM_DESC}} ##{{result.ITEM_CODE}} </font> </Strong></p><br><br><a>
+                                    <p><Strong>Condition: {{result.ITEM_COND}} </Strong></p>
+                        </div>
+                        <div class = "col-md-2">
+                            <p>Quantity    <input type= "text" class="form-control" name="Qty" id="Qty" ng-model="Qty"  pattern="[0-9]" style="width:40px" maxlength="3" /> <font size="1" color ="blue"><small><b>Update</b></font></p>
+
+                        </div>
+
+                        <div class = "col-md-2"><br>
+                            <p><font size="4" color ="black"><b> &nbsp&nbsp&nbsp${{result.TOTAL_PRICE}}</b></font></p>
+                        </div>
+                    </div>
+
+                    <div class ="row">
+                        <div class ="col-md-1 col-md-offset-3">
+                            <p><Strong>Ordered: {{result.QUANTITY}} </Strong></p>
+                        </div>
+                        <div class ="col-md-4 col-md-offset-2">
+                            <p><font size="4" color ="blue"><b> &nbsp&nbsp&nbspStandard (1-6 business &nbsp&nbsp&nbspdays)</b></font></p>
+                            <p><font size="2" color ="black">&nbsp&nbsp&nbspFedEx Ground or FedEx Home &nbsp&nbsp&nbspDelivery</b></font></p>
+                        </div>
+                        <div class ="col-md-2">
+                            <p><font size="3" color ="black"><b> &nbsp&nbsp&nbsp&nbspFREE</b></font></p>
+                        </div>
+                    </div >
+                    <div class="col-md-1 col-md-offset-10">
+                        <p> <a ng-click="RemoveCartItem(result.ITEM_CODE);" <Strong><font size="4" color ="blue"><b>Remove</font></Strong></p></a>
+
+                    </div>
+                </div><br><br>
+
+
+
+            </div>
+        </div>
+
+
+
+        <div class="col-md-3 col-md-offset-1" style="border-style:double;" >
+            <div class="row"><br>
+                <div class="col-md-12">
+                    <font size="5" color ="black"><b>Cart Summary </b></font><font size="1">({{QTYC}} items)</font>
+                    <font size="3" color ="black">________________________________</font>
+                    <div  >
+                        <font size="5" color ="black"><b>Total  : $ {{Cart_Price}}</b></font>
+
+                    </div> <br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/order"><button type="button" class="btn btn-primary" style="width:180px"> Proceed to CheckOut</button> <br><br>
+                        <p><img src="https://pbs.twimg.com/profile_images/698397813672058881/vpt3vjf3.jpg" class="img-responsive" alt="Cinque Terre" width="50" height="50" align="left"> <br>
+                            <font size="2" color ="grey"> - MONEY BACK &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -         GUARANTEE</font></p><br>
+                        <font size="2" color ="grey">Covers your purchase price plus original shipping on virtually all items.
+                            Get the item you ordered or get your money back.</font>&nbsp&nbsp&nbsp
+                        <font size="2" color ="blue">Learn more</font>
+                </div> <br>
+            </div>
+
+        </div>
+
+    </div><br><br>
+
+    <div class="col-md-6 col-md-offset-2" style="border-style:ridge;"><br>
+       <div class="column" >
+
+            <div class="row">
+
+            </div>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size="3" color ="black">Subtotal Price  : $ {{Cart_Price}}</font>
+
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <font size="3" color ="black">Shipping &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : FREE</font>
+
+            <font size="3" color ="black">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_________________________________________________________</font>
+
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size="4" color ="black"><b>Total : $ {{Cart_Price}}</b> </font>
+            <font size="3" color ="black">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_________________________________________________________</font>
+            <br><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/homepage"><button type="button" class="btn btn-default" style="width:180px"> Continue Shopping</button>
+                &nbsp&nbsp&nbsp&nbsp<a href="/order"><button type="button" class="btn btn-primary" style="width:180px"> Proceed to CheckOut</button>
+
+
+                 </div><br>
+             </div>
+             <div class="col-md-6">
+                 <font size="5" color ="black"><b> Your saved items </b> </font>
+
+             </div>
+         </div><br><br>
+
+
+
+
+
+
+
+
+         </body>
+         </html>

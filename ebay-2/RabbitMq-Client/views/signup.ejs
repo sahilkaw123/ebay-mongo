@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>Loginpage</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+
+
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+</head>
+<body ng-app="signup" ng-controller="signupCtrl"> >
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-5">
+            <img src="https://pbs.twimg.com/profile_images/698397813672058881/vpt3vjf3.jpg" alt="Mountain View" style="width:150px;height:150px;">
+        </div>
+        <div class ="form-body" >
+            <div class="row">
+                <div class="col-md-4" >
+                </div>
+                <div class="col-md-4" style="border-style:ridge;"  >
+                    <ul class="nav nav-tabs nav-justified" >
+                        <li class="active"><a href="#signapp" data-toggle="tab" style="font-size: 18px"><span class="glyphicon glyphicon-circle-arrow-right" style="color:	#C0C0C0; font-size: 25px"></span>Sign in</a></li>
+                        <li class=""><a href="#signuser" data-toggle="tab" style="font-size: 18px"><span class="glyphicon glyphicon-plus-sign" style="color:  #C0C0C0; font-size: 25px"></span>Register</a></li>
+                    </ul>
+
+
+                    <div id="my-tab-content" class="tab-content">
+
+                        <div class="tab-pane fade in active" id="signapp">
+
+                            <form ng-controller="signupCtrl">
+
+                                <br>
+                                <div>
+                                    <ng-form name="mailForm" class="ng-pristine ng-valid ng-valid-pattern">
+
+                                        <input type="email" class="form-control ng-pristine ng-untouched ng-valid ng-valid-pattern" ng-model="username" name="username" placeholder="Email" style="height:30px;">
+
+                                        <span ng-show="mailForm.username.$error.pattern" style="color:red" class="ng-hide">Please enter a valid email address.</span>
+                                        <br>
+
+                                        <input type="email" class="form-control ng-pristine ng-untouched ng-valid ng-valid-pattern" ng-model="reusername" ng-keyup="compare(reusername)" name="reusername" placeholder="Reenter email" style="height:30px;">
+                                        <br>
+                                        <span ng-show="isconfirm || mailForm.reusername.$dirty " ng-class="{true:&#39;green&#39;,false:&#39;red&#39;}[isconfirm]" class="ng-hide"><font color="red" class="ng-binding"> Looks like these email addresses dont match</font> </span>
+                                    </ng-form>
+                                </div>
+
+                                <div>
+                                    <ng-form name="passwordForm">
+                                        <input type="password" class="form-control" ng-model="password" name="password" placeholder="Password" ng-pattern="re1" style="height:30px;" /><br />
+                                        <!--<span ng-show="passwordForm.password.$error.pattern" style="color:red">Please enter correct password.<br></span> -->
+                                    </ng-form>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="firstName" name="firstName" placeholder="First name" style="height:30px;"> </div>
+                                    <div class="col-md-6 ">
+                                        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="lastName" name="lastName" placeholder="Last name" style="height:30px;"></div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="exampleInputPassword1">
+
+
+                                    </label>
+
+                                    <input type="phone" class="form-control ng-pristine ng-untouched ng-valid" id="phone" ng-model="phone" placeholder="  +1    Mobile phone">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <p></p><h5><small>  By <font color="black"><b>Registering<b></b></b></font><b><b>, you agree that you've read and accepted our <font color="blue"><u>User</u></font>
+                                                        <font color="blue"><u>Agreement</u></font>, you're at least 18 years old, and you consent to our
+                                                        <font color="blue"><u>Privacy Notice</u></font> and receiving marketing communications from us.</b></b></small></h5><p></p><b><b>
+                                            </b></b></div></div><b><b>
+
+
+                                        <div>
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="register()">
+                                                Register
+                                            </button> </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>____________________________________________________</p></div></div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <p></p><h4><font color="black">WANT TO JOIN AS A BUSINESS?</font> <p></p></h4></div></div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <p></p><h5><font color="blue"><b>Register for a business account</b></font> <p></p></h5></div></div>
+
+
+
+                            </form>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    var app = angular.module("signup", []);
+    app.controller('loginCtrl', function ($scope, $http) {
+        //alert('in controller signup');
+        // console.log("SAHIL");
+        $scope.register = function () {
+
+            $http({
+                method: "POST",
+                url: '/checksignin',
+                data: {
+                    username: $scope.username,
+                    password: $scope.password
+                }
+            }).success(function (res) {
+                if (res.check == true) {
+                    window.location = '/page';
+                    // console.log("SAHIL");
+                }
+            }).error(function (err) {
+                $scope.msg = "<font color="red"> Oops, that's not a match.</font>";
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

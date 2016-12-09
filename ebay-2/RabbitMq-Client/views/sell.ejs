@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>Loginpage</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+    <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>"
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+
+
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <script src="angularjs/sells.js"></script>
+</head>
+<style>
+    @media(max-width: 200px) {
+        h1 {
+            font-size: 12pt;
+        }
+    }
+</style>
+<body ng-app="sell" ng-controller="sellCtrl" >
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="https://pbs.twimg.com/profile_images/698397813672058881/vpt3vjf3.jpg" alt="Mountain View" style="width:150px;height:130px;">&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <font color="blue" size="2">Switch to advanced tool | Save for later</font>
+            <div class="row">
+                <div class="col-md-12">
+                    <p><strong> <font color="grey" size="4">Your item will be listed in this category:</font></strong> </p>
+                </div>  </div></div></div></div>
+
+
+
+<form>
+
+    <div class="container">
+        <div class ="row">
+
+            <div class="col-md-9" style="border-style:ridge;">
+
+                <div class="page-header" style="height: 20px">
+                    <strong> <font size="3" color ="grey">&nbsp&nbsp&nbsp  Describe your Item</font style="font-size: 10px"></strong>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3"><br>
+                            <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Title</p> </font> </div>
+                        <div class="col-md-9">
+                            <label for="exampleInputEmail1">
+                            </label>
+                            <input type="text"  class="form-control" name="title" id="title" ng-model="title" style="height:30px;">
+                        </div></div>
+
+
+
+
+                    <div class="row">
+                        <div class="col-md-3"><br>
+                            <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Condition</p> </font>
+                        </div>
+                        <div class="col-md-6" ><br>
+
+                            <select id="sel" class="form-control" ng-model="condition" ng-options="obj.cond as obj.name for obj in condition1.data"><option value=""> - </option></select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3"><br>
+                            <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Category</p> </font>
+                        </div>
+                        <div class="col-md-6" ><br>
+
+                            <select id="sel" class="form-control" ng-model="category" ng-options="obj.days as obj.name for obj in category1.data"><option value=""> - </option></select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-3"><br>
+                            <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Group Name</p> </font>
+                        </div>
+                        <div class="col-md-6" ><br>
+
+                            <select id="sel" class="form-control" ng-model="groupName" ng-options="obj.days as obj.name for obj in groupName1.data"><option value=""> - </option></select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3"><br>
+                            <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Quantity</p> </font> </div>
+                        <div class="col-md-9">
+                            <label for="exampleInputEmail1">
+                            </label>
+                            <input type="text"  class="form-control" name="qty" id="qty" ng-model="qty" style="height:30px;">
+                        </div></div>
+
+                    <div class="row">
+                        <div class="col-md-3"><br>
+                            <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Details</p> </font> </div>
+                        <div class="col-md-9">
+                            <label for="exampleInputEmail1">
+                            </label>
+                            <textarea class="form-control" rows="5"class="form-control" name="Details" ng-model="detail"></textarea>
+                        </div></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <div class ="row">
+            <div class="col-md-9"><br><br></div>
+
+
+            <div class="col-md-9" style="border-style:ridge;"  >
+                <div class="page-header" style="height: 20px">
+                    <strong> <font size="3" color ="grey">&nbsp&nbsp&nbsp  Select Format and Price</font style="font-size: 10px"></strong>
+                </div>
+                <div class ="row">
+                    <div class="col-md-3"><br>
+                        <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Listing Format</p> </font> </div>
+                    <!-- -->
+                    <div class="col-md-3 col-md-offset-1">
+                        <font size="1"><p><b>Auction is best when you're not sure
+                                    how much your item could sell for.<b><p></font>
+                        <button ng-click=save(1)>Auction</button></div>
+                    <!-- <button ng-click="toggle()">Auction</button></div> -->
+
+                    <div class="col-md-3 col-md-offset-1">
+                        <font size="1"><p><b>Fixed price is best when you know how much you want to get. <b><p></font>
+                        <button ng-click="save(0)">Fixed Price</button>
+                        <!-- <button ng-click="toggle()">Fixed Price</button> -->
+                    </div>
+                </div>
+                <!-- -->
+                <p ng-show="myVar">
+                    <div class ="row">
+                        <div class="col-md-3"><br>
+                            <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Price</p> </font> </div>
+
+            <div class="col-md-3 col-md-offset-1"><br>
+                $<input type=text ng-model="startingP"><br>
+            </div>
+            <div class ="row">
+                <div class="col-md-8 col-md-offset-4"><br>
+                    <font size="1"><p><b>Tip:<b>  Consider setting the starting price at the minimum you're comfortable with. Your item won't sell for less
+                                    than this amount.  <p></font>
+                </div></div>
+
+            <div class="col-md-3"><br>
+                <font size="3" color ="grey"> <p><font size="3" color ="red">* </font> Listing Duration</p> </font> </div>
+            <div class="col-md-6 col-md-offset-1" ><br>
+                <select id="sel" class="form-control" ng-model="duration" ng-options="obj.days as obj.name for obj in duration1.data"><option value=""> - </option></select>
+            </div>
+
+
+
+            </p><br><br><br><br><br><br><br>
+
+
+        </div>
+    </div>
+    <div class="col-md-2 col-md-offset-1" style="border-style:ridge;">
+        <div class ="row">
+            <div class="col-md-12"><br>
+                <font size="3" color ="black"> <p>Listing Fees</p> </font> </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-1">
+                <font size="1" color ="black"> <p>Insertion Fees</p> </font> </div>
+            <div class="col-md-1 col-md-offset-7">
+                <font size="1" color ="black"> <p>Free</p> </font> </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-12">
+                <font size="1" color ="black"> <p>--------------------------------------</p> </font> </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-1">
+                <font size="1" color ="black"> <p><b>Total<b></p> </font> </div>
+            <div class="col-md-1 col-md-offset-7">
+                <font size="1" color ="black"> <p>Free</p> </font> </div>
+        </div>
+
+    </div>
+
+
+    <div class ="row"><br><br>
+        <div class="col-md-1 col-md-offset-6"><br><br>
+            <a><href='/preview'>Preview</a>
+        </div>
+        <div class="col-md-3"><br><br>
+            <button type="button" class="btn btn-primary" ng-click="addProd();" style="width:120px">List it</button></div>
+    </div>
+</form>
+<br><br><br><br><br><br><br><br>
+</body>
+</html>

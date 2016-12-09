@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>ebay</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+    <style>
+        .navbar {min-height: 20px;}
+        .navbar-brand {padding:  5px; height: 20px; line-height: 20px;}
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            min-height: 180px;
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 5px 5px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .columnx {
+            margin-bottom: 10px;
+        }
+        .groupName {
+            color: #2B91AF;
+        }
+
+    </style>
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <script src="angularjs/bidstimes.js"></script>
+</head>
+
+<body ng-app="bidT" ng-controller="bidTController">
+
+
+
+<!---->
+<div class="container-fluid">
+
+    <div class ="row">
+        <div class="col-md-1">
+            <img src="http://www.localleaguefixtures.com/images/ebay_logo_small.jpg" width="120" height="60" align="left">
+        </div>
+
+
+
+
+
+
+
+        <div class="container">
+            <div class = "row">
+                <div class="col-md-12 col-md-offset-3">
+
+                </div></div></div> <br> <br>
+        <!--   <font size="2" color ="black"><small>Birthday {{birthday}}  |&nbsp&nbsp Contact {{Phone}} |&nbsp&nbsp Member since {{Joining}} | <span class="glyphicon glyphicon-map-marker"></span>&nbsp&nbspUnited States</font></small>
+     </div></div></div> <br> <br> -->
+
+
+
+        <div class="container">
+            <div class ="row">
+                <div class="container">
+
+                    <!-- Random:  ng-pattern for email ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" -->
+                    <!-- 3 offset columns to get the well in the center -->
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
+
+                    <!-- Define the two tabs -->
+                    <div class="col-md-6">
+                        <div class="well" id="well" style="border-style: ridge;">
+
+                            <!-- Add a green filled tick glyphicon -->
+                            <div class="nobr">
+                                <span class="glyphicon glyphicon-ok-circle white" style="color:	#209900; font-size: 50px; "> </span>
+                                <p style="color: green">
+                                    Your bid has been accepted, <%= firstname %>!
+                                </p>
+                            </div>
+                            <p>There is still time to bid. </p>
+                            <p>Please wait till Date: {{date}} &nbsp&nbsp Time: {{time}} for bidding results.</p>
+
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp
+                            <p>OR </p>
+
+                            <p>Please click on Continue for bidding higher amount </p>
+
+
+
+
+
+
+                            <a href="/bid"><p><button style="height: 35px;" class="btn btn-primary btn-block"> Continue Bidding</button> </p>
+
+
+                        </div>
+                        <br />
+
+
+
+                        <!-- End of row div element -->
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

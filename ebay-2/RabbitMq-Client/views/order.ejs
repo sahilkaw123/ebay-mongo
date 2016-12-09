@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>ebay</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <script src="angularjs/orders.js"></script>
+</head>
+<style>
+    .class {
+        font-family: "Times New Roman", Times, serif;
+    }
+</style>
+
+<body ng-app="order" ng-controller="orderController" style="background-color: whitesmoke;">
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <img src="https://pbs.twimg.com/profile_images/698397813672058881/vpt3vjf3.jpg" alt="Mountain View" style="width:150px;height:100px;"> <font size ="8"><small>Checkout</small>
+            </font>          </div>
+
+    </div>
+</div> <br> <br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" >
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font size ="5"><small>Pay with</small></font>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1" style="border-style:double;">
+        <div class = "row">
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-credit-card"></span> <font size ="5"><small>&nbsp&nbsp&nbsp&nbsp&nbspCredit or debit card</small></font>
+
+        </div>
+
+        <div class = "row">
+            <div class="col-md-10"> <br>
+                <input type="text" class="form-control" id="card" placeholder="Credit Card Number" maxlength="19" required>
+            </div>
+        </div>
+       <!-- <p><font color="red"> Please enter 16 digits for credit card</font> </p> -->
+        <div class ="row">
+            <div class="col-md-5"> <br>
+                <input type="text" class="form-control" id="exp" placeholder="MM/YY" maxlength="16" required>
+
+            </div>
+
+            <div class="col-md-5"> <br>
+                <input type="password" class="form-control" id="code" placeholder="Security Code" maxlength="7" required>
+                <p><font color="red"> Security code should be numeric </font> </p>
+            </div>
+
+        </div>
+
+        <div class ="row">
+            <div class="col-md-5"> <br>
+                <input type="text" class="form-control" id="Fname" placeholder="FirstName" maxlength="16" required>
+            </div>
+            <div class="col-md-5"> <br>
+                <input type="text" class="form-control" id="Lname" placeholder="LastName" maxlength="16" required>
+            </div>
+        </div>
+
+        <div class ="row">
+            <div class="col-md-12"> <br>
+                <font size ="2" color="blue"><small> Payments processed by PayPal. No PayPal account required.</small></font>
+            </div>
+            <div>
+
+                <div class ="row">
+                    <div class="col-md-12"> <br>
+
+                        &nbsp&nbsp&nbsp<input type="checkbox" value="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRemember this card for future orders
+
+                    </div></div>
+
+                <div class ="row">
+                    <div class="col-md-10 col-md-offset-1"> <br>
+
+                        <b>Billing Address</b><br>
+                        201S 4th Street<br>
+                        San Jose, CA 95112<br>
+                        United States<br>
+                        (669)xxxxx61<br><br>
+
+                        <p><font size ="3" color ="blue"><small>Edit your billing address</small></font></p>
+
+
+
+                    </div></div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-md-offset-1" style="border-style:double;">
+        <div class="row"><br>
+            <div class="col-md-12">
+                <div class="column" >
+                    <p>  <font size="2">Items({{QTYC}})&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ${{Cart_Price}}</font></p>
+                    <p>  <font size="2">Shipping: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Free</font></p>
+                    <font size="3" color ="black">________________________________</font>
+                    <div class="column">
+                        <font size="5" color ="black"><b>Total  :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ${{Cart_Price}}</b></font>
+                        <p><a href="/placeOrder"><p><button type="button" class="btn btn-primary btn-lg btn-block">Confirm and Pay</button></a></p>
+                    </div> <br>
+                </div>
+            </div>
+
+        </div>
+    </div><br><br><br>
+
+    <div class ="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-1" style="border-style:double;">
+                <div class="row"><br>
+                    <div class="col-md-6 col-md-offset-1">
+                        <p>Ship to</p>
+                        <font color ="black"><b>Shipping Address</b><br>
+                            201S 4th Street<br>
+                            San Jose, CA 95112<br>
+                            United States<br>
+                            (669)xxxxx61<br><br></font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <div class ="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-1" style="border-style:double;"><br>
+                <font size="3" color ="black"><b>Review Items:</b></font>
+
+                <div class="row"><br>
+                    <div class="col-md-12" style="border-style:double;">
+                        <div class="column" ng-repeat="result in newResult">
+
+                            <div class="row"><br>
+                                <div class="col-md-3" style="border-style:double;">
+                                    <a href="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src={{result.PIC}} alt="Cinque Terre" width="100" height="100" ></a>
+                                </div>
+
+                                <div class="col-md-4 col-md-offset-1">
+
+                                    <p><Strong>Item Name : </Strong>{{result.ITEM_NAME}}</p>
+                                    <p><Strong>Item Description : </Strong>{{result.ITEM_DESC}}</p>
+                                    <p><Strong>Item Quantity : </Strong>{{result.QUANTITY}}</p>
+                                    <p><Strong>Item Individual Price : $</Strong>{{result.PRICE}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp               &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/cart"><button type="button" class="btn btn-primary btn-lg">Back To Shopping Cart</button></a> <br>
+            </div>
+        </div>
+    </div>
+</div>
+</div><br><br>
+
+
+
+
+
+
+
+
+</body>
+</html>

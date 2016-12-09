@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>Loginpage</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+
+
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+</head>
+<body ng-app="signin" >
+
+<div class="container"  ng-controller="loginCtrl">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-5">
+            <img src="https://pbs.twimg.com/profile_images/698397813672058881/vpt3vjf3.jpg" alt="Mountain View" style="width:150px;height:150px;">
+          </div>
+          <div class ="form-body" >
+        <div class="row">
+                <div class="col-md-4" >
+                </div>
+                <div class="col-md-4" style="border-style:ridge;"  >
+                    <ul id="x" class="nav nav-tabs" >
+                        <li class="active"><a href="#" data-toggle="tab" style="width:175px;" >   Sign In  </a></li>
+                        <li class=""><a href="#" data-toggle="tab" style="width:175px;"> Register</a></li>
+                    </ul>
+                    <div> <p ng-bind-html="msg"></p> </div>
+                    <form role="form">
+                        <div class="form-group">
+
+                            <label for="exampleInputEmail1">
+                                </label>
+                            <input type="text" class="form-control" name="username" id="username" ng-model="username" placeholder="Email or Username" ng-model="username" style="height:40px;">
+
+
+                            <label for="exampleInputPassword1">
+                            </label>
+                            <input type="password" class="form-control" name="password" id="password" ng-model="password" placeholder="Password" ng-model="password" style="height:40px;">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" type="button" ng-click="submit()">
+                            Sign in
+                        </button> <br>
+
+
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Stay signed in
+                          </label>
+                        </div>
+                        <div class ="col-md-12" >
+                          <p><h4><small>
+                            Using a public or shared device? Uncheck to protect your
+                            account.<font color="blue">Learn more</font>
+                          </h4></small></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+<script>
+    var app = angular.module("signin", []);
+    app.controller('loginCtrl', function ($scope, $http) {
+    //console.log("SAHIL");
+        $scope.submit = function () {
+       
+            $http({
+                method: "POST",
+                url: '/checksignin',
+                data: {
+                    username: $scope.username,
+                    password: $scope.password
+                }
+            }).success(function (res) {
+                if (res.check == true) {
+                    window.location = '/homepage';
+                  // console.log("SAHIL");
+                }
+            }).error(function (err) {
+                $scope.msg = "<font color="red"> Oops, that's not a match.</font>";
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

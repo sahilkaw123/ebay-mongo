@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>ebay</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+    <style>
+        .navbar {min-height: 20px;}
+        .navbar-brand {padding:  5px; height: 20px; line-height: 20px;}
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            min-height: 180px;
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 5px 5px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .columnx {
+            margin-bottom: 10px;
+        }
+        .groupName {
+            color: #2B91AF;
+        }
+
+    </style>
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <script src="angularjs/bidsHistorys.js"></script>
+</head>
+
+<body ng-app="bidH" ng-controller="bidHController">
+
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li class="active"></li>
+                    <li class="dropdown"><a  data-toggle="dropdown" href="#">Hi <b><%= firstname %></b>! <span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            <img src="https://pbs.twimg.com/profile_images/698397813672058881/vpt3vjf3.jpg" class="img-responsive" alt="Cinque Terre" width="40" height="40" align="left">
+                            <a class="text-center" href="#"><small>&nbsp&nbsp&nbsp&nbsp<%= firstname %></small>&nbsp<small><%= lastname %></small></a>
+                            <a class="text-center" href="#"><small><b><%=username%></b></small></a>
+                            <a class="text-left" href="#"><font color ="blue"><small> My collections</small></font></a>
+                            <a class="text-left" href="#"><font color ="blue"><small> Account Settings</small></font></a>
+                            <a class="text-left" href="logout"><font color ="blue"><small> Sign out</small></font></a>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">| <small>Daily Deals</small>  |</a></li>
+                    <li><a href="#">| <small>Gift Cards</small> |</a></li>
+                    <li><a href="#">| <small>Sell</small> |</a></li>
+                    <li><a href="#">| <small>Help & Contact</small> |</a></li>
+                    <li>&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp
+
+
+                    </li>
+
+                    <li class="dropdown"><a  data-toggle="dropdown" href="#"><small>My ebay</small></span></a>
+                        <ul class="dropdown-content">
+
+
+                            <a class="text-left" href=""><small> Summary</small></a>
+                            <a class="text-left" href="#"><small> Bids/Offers</small></a>
+                            <a class="text-left" href="#"><small> Watch list</small></a>
+                            <a class="text-left" href="#"><small> Wish list</small></a>
+                            <a class="text-left" href="#"><small> All lists</small></a>
+                            <a class="text-left" href="#"><small> Purchase history</small></a>
+                            <a class="text-left" href="#"><small> Selling</small></a>
+                            <a class="text-left" href="#"><small> My Collections</small></a>
+                            <a class="text-left" href="#"><small> Followed searches</small></a>
+                            <a class="text-left" href="#"><small> Messages</small></a>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a  data-toggle="dropdown" href="#"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/rounded-glossy-black-icons-culture/033335-rounded-glossy-black-icon-culture-bell5-solid-sc48.png" alt="Cinque Terre" width="25" height="25" ></a>
+                        <ul class="dropdown-content">
+                            <p class="text-center" > &nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                You're all caught up!</p>
+                        </ul>
+                    </li>
+                    <li><a href="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="https://image.freepik.com/free-icon/shopping-cart-of-checkered-design_318-50865.png" alt="Cinque Terre" width="25" height="25" ></a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </div>
+</div> <br><br>
+<!---->
+<div class="container-fluid">
+
+    <div class ="row">
+        <div class="col-md-1">
+            <img src="http://www.localleaguefixtures.com/images/ebay_logo_small.jpg" width="120" height="60" align="left">
+        </div>
+
+        <div class="col-md-1"><br>
+
+            <li class="dropdown"><a data-toggle="dropdown" href="#"><b>Shop by Category</b><span class="caret"></span></a>
+                <ul class="dropdown-content">
+
+                    <a class="text-left" href=""><small> Summary</small></a>
+                    <a class="text-left" href="#"><small> Bids/Offers</small></a>
+                    <a class="text-left" href="#"><small> Watch list</small></a>
+                    <a class="text-left" href="#"><small> Wish list</small></a>
+                    <a class="text-left" href="#"><small> All lists</small></a>
+                    <a class="text-left" href="#"><small> Purchase history</small></a>
+                    <a class="text-left" href="#"><small> Selling</small></a>
+                    <a class="text-left" href="#"><small> My Collections</small></a>
+                    <a class="text-left" href="#"><small> Followed searches</small></a>
+                    <a class="text-left" href="#"><small> Messages</small></a>
+                </ul>
+            </li>
+        </div>
+
+        <div class="col-md-4"><br>
+            <input type="text" class="form-control" name="s" placeholder="Search" value="" style="width:130px,height:40px;" >
+        </div>
+        <div class="col-md-3" ><br>
+            <select class="form-control" ng-model="option" ng-options="x.model for x in options" style="width:300px"></select>
+        </div>
+        <div class="col-md-1"><br>
+            <button type="button" class="btn btn-primary" style="width:120px">Search</button></div>
+        <div class="col-md-2" ><br>
+            <font><small>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAdvanced</small></font>
+        </div>
+    </div> <br>
+</div>
+
+<div class="container">
+    <div class ="row">
+        <div class="col-md-12">
+            <div class ="col-md-12">
+            </div><br><br><br>
+
+            <div class="col-md-12 " style="background-color:white;">
+                <div class= "row">
+
+                    <div class="col-md-2">
+                        <a class="text-left" href="/profile"><small><b>Hello <%=username%> !!</b></small></a>
+                    </div>
+
+                    <div class="col-md-2 col-md-offset-6">
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
+</div>
+<div class="container">
+    <div class = "row">
+        <div class="col-md-12 col-md-offset-3">
+
+        </div></div></div> <br> <br>
+<!--   <font size="2" color ="black"><small>Birthday {{birthday}}  |&nbsp&nbsp Contact {{Phone}} |&nbsp&nbsp Member since {{Joining}} | <span class="glyphicon glyphicon-map-marker"></span>&nbsp&nbspUnited States</font></small>
+</div></div></div> <br> <br> -->
+
+
+
+<div class="container">
+    <div class ="row">
+        <div class="col-md-12 well">
+            <div class ="row">
+                <a class="text-left" href=""><font size="6" color ="blue"><small><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp No of Bids on your item - ({{ROW_COUNT}})</b></font></small></a> <br><br>
+                <div class="column" ng-repeat="result in newResult"  >
+                    <div class="col-md-10 col-md-offset-1 well">
+                        <p><font color="black" size="2"><Strong>Bid on <font color ="blue">{{result.ITEM_NAME}}-{{result.ITEM_DESC}}</font> Item Code #<font color ="blue">{{result.ITEM_CODE}}</font> from Bidder <font color ="blue">{{result.BUYER_USERNAME}}</font> Bid Amount <font color ="blue">$ {{result.ITEM_PRICE}}</font> on Date: <font color ="blue">{{result.currDate}}</font> </font></Strong></font><p>
+
+                            <br>
+                    </div>  </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

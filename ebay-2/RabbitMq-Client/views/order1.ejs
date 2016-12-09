@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+    <script src="public/javascripts/scripts.js"></script>
+    <title>ebay</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <script src="angularjs/orders.js"></script>
+</head>
+
+<body ng-app="order" ng-controller="orderController">
+
+  
+
+
+<div class="column" ng-repeat="result in newResult1">
+
+      <div class="col-md-4 ">
+          <div class="col-md-8 well" >
+	<a href="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="https://image.freepik.com/free-icon/shopping-cart-of-checkered-design_318-50865.png" alt="Cinque Terre" width="100" height="100" ></a>
+  	<div class="row">
+  	
+  
+    
+      <p><Strong>Item Name : </Strong>{{result.ITEM_NAME}}</p>
+		<p><Strong>Item Description : </Strong>{{result.ITEM_DESC}}</p>
+    <p><Strong>Item Price : $</Strong>{{result.ITEM_PRICE}}</p>
+     		
+    </div>
+  	    	</div>
+      </div>
+  </div>
+  
+<div class="column" ng-repeat="result in Cart_Price">
+
+      <div class="col-md-8 ">
+          <div class="col-md-8 well" >
+	<a href="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="https://image.freepik.com/free-icon/shopping-cart-of-checkered-design_318-50865.png" alt="Cinque Terre" width="100" height="100" ></a>
+  	<div class="row">
+
+    </div> 
+        <p><Strong>Total Price : </Strong>{{result.cart_Price}}</p>
+        </div>
+        </div>
+        </div>     
+<a href="/placeOrder"><p><button> Confirm and Pay</button> </p>
+  
+</body>
+</html>
+
